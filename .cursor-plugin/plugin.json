@@ -1,0 +1,19 @@
+{
+  "name": "foliyo",
+  "displayName": "Foliyo",
+  "version": "1.0.0",
+  "description": "Create, brand, publish and track client-ready pages from your AI tools.",
+  "author": {
+    "name": "Foliyo"
+  },
+  "homepage": "https://foliyo.io",
+  "keywords": [
+    "mcp",
+    "publishing",
+    "reports",
+    "proposals",
+    "branding",
+    "analytics"
+  ],
+  "logo": "assets/logo.png"
+}
