@@ -1,0 +1,17 @@
+{
+  "name": "foliyo",
+  "version": "1.0.0",
+  "description": "Create, brand, publish and track client-ready pages from your AI tools.",
+  "mcpServers": {
+    "foliyo": {
+      "httpUrl": "https://foliyo.io/mcp",
+      "oauth": {
+        "enabled": true,
+        "scopes": [
+          "mcp",
+          "workspace:write"
+        ]
+      }
+    }
+  }
+}

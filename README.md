@@ -32,6 +32,16 @@ codex mcp login foliyo --scopes 'mcp,workspace:write'
 
 Or open Integrations, add an MCP server, enter the server URL above, and sign in.
 
+### Gemini CLI
+
+Install the hosted MCP connection and Foliyo skill:
+
+```sh
+gemini extensions install https://github.com/jooliperbush/foliyo-mcp
+```
+
+Restart Gemini CLI, then run `/mcp auth foliyo` to sign in. Ask Gemini to create a Foliyo from your work. This extension is for Gemini CLI; Gemini web app availability and custom app setup are separate.
+
 ### Other clients
 
 Use the same server URL in a client that supports remote Streamable HTTP MCP and OAuth. See the setup guide for Claude, ChatGPT, Windsurf and VS Code instructions and the standalone CLI. Client feature support varies.
