@@ -23,7 +23,7 @@ Foliyo is a hosted MCP service. Do not clone a server, start a local web applica
 }
 ```
 
-Use the header only for the workspace-key option. Replace the placeholder privately with the user's own Foliyo key. CLI configuration lives at `~/.cline/mcp.json`; in the IDE, use MCP Servers > Configure > Configure MCP Servers to locate the active file.
+Use the header only for the workspace-key option. Replace the placeholder privately with the user's own Foliyo key. In Cline CLI 3.0.61, the active configuration is `<data-dir>/settings/cline_mcp_settings.json` when using `--data-dir`; the default storage resolves to `~/.cline/data/settings/cline_mcp_settings.json`. This version did not load the project-local `.cline/mcp.json` in our test. In the IDE, use MCP Servers > Configure > Configure MCP Servers to locate the active file. Check the installed version rather than assuming the same file path across Cline releases.
 
 The exact transport spelling matters: `streamableHttp`. Omitting it can select legacy SSE, which Foliyo does not serve.
 
