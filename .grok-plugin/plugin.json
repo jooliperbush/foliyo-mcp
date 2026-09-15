@@ -1,0 +1,17 @@
+{
+  "name": "foliyo",
+  "version": "1.0.0",
+  "description": "Create, brand, publish, update and track Foliyo client pages.",
+  "author": {
+    "name": "Foliyo",
+    "email": "hello@foliyo.io"
+  },
+  "homepage": "https://foliyo.io",
+  "repository": "https://github.com/jooliperbush/foliyo-mcp",
+  "license": "MIT",
+  "keywords": [
+    "foliyo"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

@@ -46,6 +46,19 @@ Restart Gemini CLI, then run `/mcp auth foliyo` to sign in. Ask Gemini to create
 
 See [Cline installation instructions](llms-install.md). Use the hosted endpoint with `type: "streamableHttp"`; preserve existing MCP servers when adding Foliyo.
 
+### Grok Build
+
+This repository includes a Grok Build plugin manifest, the Foliyo skill, and a hosted MCP connection. Official marketplace inclusion requires review and is not yet approved.
+
+To connect the hosted server directly:
+
+```sh
+grok mcp add --transport http foliyo https://foliyo.io/mcp
+grok mcp doctor foliyo
+```
+
+Complete the browser sign-in when Grok requests authorization. Use `/mcps` to inspect the connection. This is Grok Build setup, not a listing in Grok chat's connector catalog.
+
 ### Other clients
 
 Use the same server URL in a client that supports remote Streamable HTTP MCP and OAuth. See the setup guide for Claude, ChatGPT, Windsurf and VS Code instructions and the standalone CLI. Client feature support varies.
@@ -67,3 +80,11 @@ Free includes unlimited published pages, basic view counts, PIN protection and F
 ## Authentication notes
 
 Tool discovery is public so directories can inspect capabilities. Private data and tool execution require authorization. Never place access tokens or client data in this repository or a public listing.
+
+## Plugin distribution and data access
+
+The connection configuration and instructions in this repository are MIT licensed, consistent with the Foliyo CLI package. This does not license the hosted application or grant rights to Foliyo trademarks. The hosted service is governed by [Foliyo terms](https://foliyo.io/terms) and [privacy policy](https://foliyo.io/privacy).
+
+This plugin calls `https://foliyo.io/mcp` for authenticated tool operations and Foliyo's advertised OAuth endpoints on `https://foliyo.io` for sign-in. Published pages are served under `*.foliyo.io`. It contains no shell hooks, installers, local server executable or telemetry. The agent sends document content and selected branding, recipients and sharing settings when the user requests a publish or update; reports return workspace data. Notification email and deletion require explicit user requests. OAuth grants `mcp` and, for cross-client updates, `workspace:write`. Credentials stay in the client's credential storage. Do not include credentials in published pages, skill files or public submissions.
+
+Maintained by Foliyo through the `jooliperbush` GitHub account, which owns this public integration repository. Contact: hello@foliyo.io.
