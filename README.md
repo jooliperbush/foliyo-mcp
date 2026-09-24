@@ -15,6 +15,25 @@ This repository contains public connection configuration and a usage skill for F
 - **Authentication:** OAuth with browser sign-in and PKCE. A Foliyo account is required.
 - **Official MCP Registry name:** io.foliyo/foliyo
 
+### Claude plugin
+
+This repository bundles a Claude skill and the hosted Foliyo MCP connection. Public directory review is separate from installing it directly; no Anthropic verification or featured placement is claimed.
+
+For Claude Code, install from this repository's marketplace:
+
+```text
+/plugin marketplace add jooliperbush/foliyo-mcp
+/plugin install foliyo@foliyo
+```
+
+Then use `/mcp` to authenticate the Foliyo connection. See [setup instructions](SETUP.md). For Claude's web/desktop app, use its custom connector at `https://foliyo.io/mcp` and upload the [Foliyo skill](skills/foliyo/SKILL.md) where supported until directory installation is available.
+
+Try: “Create a Foliyo from this proposal.” The skill asks about format, audience, brand, sender and access, reusing choices already supplied. Available HTML formats include scrolling pages, fixed 16:9 slides and flexible slides. This is not a PowerPoint export or arbitrary JavaScript hosting service.
+
+Detailed readership analytics and email gates require Foliyo Pro. A shared PIN does not identify readers; personal links attribute activity to the named recipient but can be forwarded. Notification email is opt-in. Work submitted to publishing tools is stored by Foliyo; read the [privacy policy](https://foliyo.io/privacy) and [terms](https://foliyo.io/terms).
+
+The integration source is MIT licensed. The hosted service is subject to its own terms and plan limits. Support: hello@foliyo.io.
+
 ### Cursor
 
 Install this plugin, or add the contents of mcp.json to your Cursor MCP configuration. Enable Foliyo and complete browser authorization.

@@ -1,0 +1,22 @@
+{
+  "name": "foliyo",
+  "displayName": "Foliyo",
+  "version": "1.0.0",
+  "description": "Turn your work into branded, access-controlled Foliyo pages and presentations. Update the same link and check reader engagement.",
+  "author": {
+    "name": "Foliyo",
+    "email": "hello@foliyo.io",
+    "url": "https://foliyo.io"
+  },
+  "homepage": "https://foliyo.io/integrations",
+  "repository": "https://github.com/jooliperbush/foliyo-mcp",
+  "license": "MIT",
+  "keywords": [
+    "publishing",
+    "presentations",
+    "reports",
+    "branding",
+    "mcp",
+    "analytics"
+  ]
+}

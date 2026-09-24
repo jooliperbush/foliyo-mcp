@@ -1,7 +1,8 @@
 {
   "mcpServers": {
     "foliyo": {
-      "url": "https://foliyo.io/mcp"
+      "url": "https://foliyo.io/mcp",
+      "type": "http"
     }
   }
 }

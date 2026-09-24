@@ -1,0 +1,17 @@
+{
+  "name": "foliyo",
+  "owner": {
+    "name": "Foliyo",
+    "email": "hello@foliyo.io"
+  },
+  "plugins": [
+    {
+      "name": "foliyo",
+      "source": "./",
+      "description": "Turn your work into branded, access-controlled Foliyo pages and presentations. Update the same link and check reader engagement."
+    }
+  ],
+  "metadata": {
+    "description": "Foliyo publishing skills and hosted MCP connection for Claude."
+  }
+}

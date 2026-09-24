@@ -14,6 +14,14 @@ Call `prepare_foliyo` first for creation or an update. Resolve the matching save
 
 For a recall or readership request, call `find_link`, `list_pages` or `link_report` directly as appropriate. Report only observed readership, including who has not opened it when the data supports that conclusion.
 
+## First-use questions
+
+Follow the hosted `prepare_foliyo` response's `creationQuestions` and workflow. Ask one unanswered question at a time with numbered choices, accepting numbers or free text. Resolve explicit choices and matching saved project context first. Ask audience, format, visual brand, sender and access, then whether personal recipient links are needed. Always ask format when missing: scrolling page, fixed 16:9 slides, flexible-height slides, supported static interactive experience, or a recommendation. These are HTML layouts, not downloadable PowerPoint/PDF exports.
+
+Keep client design separate from sender identity. Offer saved guides or request a website/assets; never claim to inspect a website without reading it. Personal links provide attribution separately from the access gate and can be forwarded. Only offer email gates and detailed analytics on Pro. Do not assume an email from an anonymous view.
+
+Summarise the choices before building: 1. Build it 2. Add a feedback prompt 3. Change a choice 4. More options. Skip redundant confirmation when already told to proceed. Use existing page settings for edits rather than restarting onboarding. Never send notifications merely because recipients were supplied. Offer saving reusable preferences without silently changing defaults.
+
 ## Create or update
 
 For a new document, use the user's actual material. Make a complete responsive HTML document with accessible headings, readable type, useful alt text and layouts that work on mobile. Apply the loaded design guide during composition. Do not invent facts, brand assets, recipients or results.
