@@ -1,7 +1,7 @@
 {
   "name": "foliyo",
   "displayName": "Foliyo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Turn your work into branded, access-controlled Foliyo pages and presentations. Update the same link and check reader engagement.",
   "author": {
     "name": "Foliyo",
@@ -18,5 +18,9 @@
     "branding",
     "mcp",
     "analytics"
-  ]
+  ],
+  "privacyPolicyUrl": "https://foliyo.io/privacy",
+  "termsOfServiceUrl": "https://foliyo.io/terms",
+  "supportUrl": "https://foliyo.io/support",
+  "documentationUrl": "https://foliyo.io/integrations"
 }
