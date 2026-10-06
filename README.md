@@ -36,7 +36,11 @@ The integration source is MIT licensed. The hosted service is subject to its own
 
 ### Cursor
 
-Install this plugin, or add the contents of mcp.json to your Cursor MCP configuration. Enable Foliyo and complete browser authorization.
+Use the **Add to Cursor** button on the [Foliyo community listing](https://cursor.directory/plugins/foliyo), or merge the `foliyo` entry from [mcp.json](mcp.json) into your Cursor MCP configuration, preserving any existing servers. Enable Foliyo and complete browser authorization.
+
+The community listing and the official Cursor Marketplace are separate. An official Marketplace application was received on 14 September 2026; approval and an official listing remain unconfirmed as of 6 October 2026. The public plugin package includes both the hosted MCP configuration and the [Foliyo skill](skills/foliyo/SKILL.md). Installing only the MCP configuration does not install the skill.
+
+Plugin support: hello@foliyo.io. [Privacy](https://foliyo.io/privacy) · [Terms](https://foliyo.io/terms). A Foliyo account is required; Free and Pro plan details are below.
 
 ### Codex
 

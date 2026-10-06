@@ -1,12 +1,15 @@
 {
   "name": "foliyo",
   "displayName": "Foliyo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create, brand, publish and track client-ready pages from your AI tools.",
   "author": {
-    "name": "Foliyo"
+    "name": "Foliyo",
+    "email": "hello@foliyo.io"
   },
   "homepage": "https://foliyo.io",
+  "repository": "https://github.com/jooliperbush/foliyo-mcp",
+  "license": "MIT",
   "keywords": [
     "mcp",
     "publishing",
@@ -15,5 +18,5 @@
     "branding",
     "analytics"
   ],
-  "logo": "assets/logo.png"
+  "logo": "assets/foliyo-icon.png"
 }
