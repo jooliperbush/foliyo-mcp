@@ -10,17 +10,25 @@ Turn the user's work into a finished static document and a live Foliyo link. Kee
 
 ## Prepare before composing
 
-Call `prepare_foliyo` first for creation or an update. Resolve the matching saved project, sender, design guide, audience and sharing policy from account context before asking questions. Read the relevant `brand_guide` before writing HTML. Honor explicit user choices over saved defaults. Ask only for information that is essential and still missing; avoid repeating questions already answered in this conversation.
+For new work, call `prepare_foliyo` with all explicit choices already known from the brief. Follow `nextStep`, then call it again with all known choices after each answer. It is stateless. Use matching saved project context when available; a workspace default or a saved sender alone does not settle an unrelated client's brand. For updates call `get_page` and preserve existing settings instead of restarting onboarding.
 
 For a recall or readership request, call `find_link`, `list_pages` or `link_report` directly as appropriate. Report only observed readership, including who has not opened it when the data supports that conclusion.
 
 ## First-use questions
 
-Follow the hosted `prepare_foliyo` response's `creationQuestions` and workflow. Ask one unanswered question at a time with numbered choices, accepting numbers or free text. Resolve explicit choices and matching saved project context first. Ask audience, format, visual brand, sender and access, then whether personal recipient links are needed. Always ask format when missing: scrolling page, fixed 16:9 slides, flexible-height slides, supported static interactive experience, or a recommendation. These are HTML layouts, not downloadable PowerPoint/PDF exports.
+Resolve all six choices: audience, format, brand, sender, access and recipients. Follow the hosted `nextStep`:
+
+- `ask`: ask only that unanswered question with numbered options, then stop and wait. A number answers only the current question. Do not bundle proposed defaults with “unless you prefer otherwise”.
+- `confirm`: show the content and full choices summary with 1. Build it 2. Add a feedback prompt 3. Change a choice 4. More options, then stop and wait.
+- `build`: compose, preflight and publish only when `readyToBuild` is true.
+
+Do not compose or save identities before the choices are complete. Never silently choose clean branding, a PIN or a shared link because the user selected a format. Pass `confirmed:true` only after summary approval, or when the user explicitly supplied/delegated every choice and asked to publish. The original “create me a Foliyo” request and a format-selection number are not summary approval. If a user changes a choice, resolve any new questions and confirm the revised summary. Keep all known choices in every preparation call.
+
+Formats are hosted HTML: scrolling web page, fixed 16:9 slides, flexible slides or supported static interaction. Offline PDF export is available via the owner export flow; editable PowerPoint is not. Recommend a format when asked, then continue the remaining questions.
 
 Keep client design separate from sender identity. Offer saved guides or request a website/assets; never claim to inspect a website without reading it. Personal links provide attribution separately from the access gate and can be forwarded. Only offer email gates and detailed analytics on Pro. Do not assume an email from an anonymous view.
 
-Summarise the choices before building: 1. Build it 2. Add a feedback prompt 3. Change a choice 4. More options. Skip redundant confirmation when already told to proceed. Use existing page settings for edits rather than restarting onboarding. Never send notifications merely because recipients were supplied. Offer saving reusable preferences without silently changing defaults.
+Confirm the complete choices before building. Only explicit delegation may settle defaults; disclose those defaults and never invent sender details or recipients. Use existing page settings for edits rather than restarting onboarding. Never send notifications merely because recipients were supplied. Offer saving reusable preferences without silently changing defaults.
 
 ## Create or update
 
@@ -36,7 +44,7 @@ The hosted server cannot read a local pathname. Read the file with the client's 
 
 Call `preflight_html` on the complete HTML and assets. Fix blocking errors and inspect warnings or sanitization that materially changes the document. Publish the same corrected content with `publish_html` and the resolved project, sender, audience and sharing settings.
 
-Follow the user's explicit or saved gate policy. For a new share with no policy, ask one essential question if the choice matters; otherwise choose a server-generated PIN and disclose the choice. Use `gate: "pin"`, omit `password` unless the user supplied a code, and return the actual `sharePassword` from the server. Do not invent a PIN.
+Follow the user's explicit or saved gate policy. For a new share with no chosen policy, ask the access question. Use a generated PIN as a default only when the user explicitly delegates that choice, and disclose it. Use `gate: "pin"`, omit `password` unless the user supplied a code, and return the actual `sharePassword` from the server. Do not invent a PIN.
 
 An unverified email gate records a claimed address; do not describe it as identity verification or secure recipient restriction. Verified email sends an authentication code, so use it when that behavior is selected. Named recipients can have personal tracking links, but naming recipients is not permission to email them. Leave update/announcement notification off unless the user explicitly asks to send it. Never send email or other messages through a separate connector without explicit authorization.
 
